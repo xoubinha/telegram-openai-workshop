@@ -12,6 +12,8 @@ __pycache__/
 # Audio files
 *.oga
 
+# Handler-saves
+*.handler-saves
 # Distribution / packaging
 .Python
 build/
