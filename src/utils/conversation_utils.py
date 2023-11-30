@@ -54,9 +54,11 @@ def conversate(id: str, conversations: dict, message: str, system_prompt: str = 
     return reply
 
 
-def end_conversation(id: str, conversations: dict):
+def end_conversation(id: str, conversations: dict, prompts: dict = None):
     if id in conversations:
         del conversations[id]
+        if prompts is not None and id in prompts:
+            del prompts[id]
         return True
     else:
         return False
