@@ -11,6 +11,7 @@ __pycache__/
 
 # Audio files
 *.oga
+*.m4a
 
 # Handler-saves
 *.handler-saves
