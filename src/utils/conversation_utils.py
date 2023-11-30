@@ -55,10 +55,14 @@ def conversate(id: str, conversations: dict, message: str, system_prompt: str = 
 
 
 def end_conversation(id: str, conversations: dict, prompts: dict = None):
-    if id in conversations:
+    success = True
+    try:
         del conversations[id]
-        if prompts is not None and id in prompts:
+    except Exception as e:
+        success = False
+    if prompts is not None:
+        try:
             del prompts[id]
-        return True
-    else:
-        return False
+        except Exception as e:
+            success = False
+    return success
