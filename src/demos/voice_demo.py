@@ -1,5 +1,5 @@
-from langchain import PromptTemplate, LLMChain
-from langchain.chains import ConversationChain
+from langchain.prompts import PromptTemplate
+from langchain.chains import ConversationChain, LLMChain
 from langchain.chat_models import ChatOpenAI
 import telebot
 from utils import get_environment_variable, download_telegram_file
