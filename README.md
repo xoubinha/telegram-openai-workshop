@@ -3,13 +3,7 @@ Demonstration project that creates a Telegram bot that connects to Open AI.
 
 ## Repository Overview
 
-This repository contains various demonstration projects related to the workshop titled "Revolucionando Telegram: Creando bots inteligentes con OpenAI". Each project demonstrates a different aspect of creating intelligent Telegram bots using OpenAI models and Python libraries. The information about the workshop is the following:
-
-- **Talk Title:** Revolucionando Telegram: Creando bots inteligentes con OpenAI
-- **Date and Time:** 30/12/23, 16:30–17:15 (Europe/London)
-- **Location:** Santiago de Compostela, Spain
-- **Language:** Español
-- **Description:**
+This repository contains various demonstration projects related to the workshop titled "Revolucionando Telegram: Creando bots inteligentes con OpenAI". Each project demonstrates a different aspect of creating intelligent Telegram bots using OpenAI models and Python libraries.
 
 Are you tired of reading long messages or listening to endless voice notes on Telegram? Imagine having a bot that could transcribe them quickly with minimal errors and provide you with summaries of the most important points of the conversation. Well, it's possible, and in this talk, we'll show you how from start to finish!
 
