@@ -101,8 +101,12 @@ def handle_audio_transcription(message):
     Args:
         message: The user's message object containing audio.
     """
-    audio_filepath = download_telegram_file(bot, message.audio.file_id)
-    transcription = transcribe_audio_with_openai(audio_filepath)
+    if message.content_type == "audio":
+        audio_filepath = download_telegram_file(bot, message.audio.file_id)
+        transcription = transcribe_audio_with_openai(audio_filepath)
+    if message.content_type == "voice":
+        audio_filepath = download_telegram_file(bot, message.voice.file_id)
+        transcription = transcribe_audio_with_openai(audio_filepath)
     bot.reply_to(
         message, f"Aquí está tu transcripción:\n{transcription}\n¿Quieres hacer algo más con ella? 🧐")
     bot.register_next_step_handler(
@@ -148,7 +152,7 @@ def process_openai_step(message: telebot.types.Message):
 
         reply_text = conversate(user_id, conversations, message_text, system_prompt=prompts.get(user_id))
         msg = bot.reply_to(message, reply_text)
-
+        
     except Exception as error:
         bot.reply_to(message, 'Upsi, ha debido de haber algún problema')
 
